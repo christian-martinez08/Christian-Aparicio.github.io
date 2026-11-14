@@ -14,12 +14,10 @@
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">MODA CH</a>
             
-            <!-- Botón hamburguesa para móviles -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Enlaces y botón de Modal -->
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -32,7 +30,6 @@
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                 </ul>
-                <!-- Botón que activa el Modal de Acción/Formulario -->
                 <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#modalRegistro">
                     Iniciar Sesión
                 </button>
@@ -40,7 +37,7 @@
         </div>
     </nav>
 
-    <!-- 2. SECCIÓN HERO (BANNER PRINCIPAL CON CONTAINER-FLUID) -->
+    <!-- 2. SECCIÓN HERO -->
     <header id="inicio" class="container-fluid bg-primary text-white py-5 text-center">
         <div class="py-4">
             <h1 class="display-4 fw-bold">Nueva Colección Streetwear Y2K</h1>
@@ -49,63 +46,66 @@
         </div>
     </header>
 
-    <!-- 3. CONTENIDO PRINCIPAL (CONTAINER ESTÁNDAR + GRID SYSTEM) -->
+    <!-- 3. CONTENIDO PRINCIPAL Y GRID -->
     <main id="catalogo" class="container my-5">
         <h2 class="text-center fw-bold mb-4">Productos Destacados</h2>
         
-        <!-- Fila con los puntos de quiebre exactos: col-12, col-md-6, col-lg-3 -->
         <div class="row g-4">
             
-            <!-- Tarjeta 1 -->
+            <!-- Tarjeta 1: Baggy Jeans -->
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card h-100 shadow-sm">
                     <img src="https://placehold.co/400x250/212529/FFF?text=Baggy+Jeans" class="card-img-top" alt="Baggy Jeans">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Baggy Jeans Vintage</h5>
                         <p class="card-text text-muted">Corte ancho de mezclilla pesada con lavado estilo años 2000.</p>
-                        <button type="button" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modalDetalles">
+                        <!-- Ojo: Abre específicamente el modal de Baggy Jeans -->
+                        <button type="button" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modalBaggy">
                             Ver Detalles
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta 2 -->
+            <!-- Tarjeta 2: Hoodie Boxy -->
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card h-100 shadow-sm">
                     <img src="https://placehold.co/400x250/212529/FFF?text=Hoodie+Boxy" class="card-img-top" alt="Hoodie Boxy">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Hoodie Boxy Fit</h5>
                         <p class="card-text text-muted">Sudadera de algodón grueso con caída estructurada en hombros.</p>
-                        <button type="button" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modalDetalles">
+                        <!-- Abre el modal del Hoodie -->
+                        <button type="button" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modalHoodie">
                             Ver Detalles
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta 3 -->
+            <!-- Tarjeta 3: Camiseta Oversized -->
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card h-100 shadow-sm">
                     <img src="https://placehold.co/400x250/212529/FFF?text=Tee+Oversized" class="card-img-top" alt="Camiseta Oversized">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Camiseta Gráfica Y2K</h5>
                         <p class="card-text text-muted">Estampado frontal de alta durabilidad y cuello acanalado grueso.</p>
-                        <button type="button" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modalDetalles">
+                        <!-- Abre el modal de la Camiseta -->
+                        <button type="button" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modalTee">
                             Ver Detalles
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta 4 -->
+            <!-- Tarjeta 4: Cargo Pants -->
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card h-100 shadow-sm">
                     <img src="https://placehold.co/400x250/212529/FFF?text=Cargo+Pants" class="card-img-top" alt="Cargo Pants">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Pantalón Cargo Parachute</h5>
                         <p class="card-text text-muted">Bolsillos laterales funcionales y ajuste elástico en tobillos.</p>
-                        <button type="button" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modalDetalles">
+                        <!-- Abre el modal de los Cargo -->
+                        <button type="button" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modalCargo">
                             Ver Detalles
                         </button>
                     </div>
@@ -120,20 +120,29 @@
         <p class="mb-0">&copy; 2026 Moda CH - Todos los derechos reservados.</p>
     </footer>
 
-    <!-- 4. VENTANAS EMERGENTES (MODALES) -->
+    <!-- 4. VENTANAS EMERGENTES (MODALES INDIVIDUALES) -->
 
-    <!-- Modal 1: Modal de Detalles (Activado desde las tarjetas) -->
-    <div class="modal fade" id="modalDetalles" tabindex="-1" aria-labelledby="tituloModalDetalles" aria-hidden="true">
-        <div class="modal-dialog">
+    <!-- Modal 1: Baggy Jeans -->
+    <div class="modal fade" id="modalBaggy" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="tituloModalDetalles">Especificaciones del Producto</h5>
+                    <h5 class="modal-title">Baggy Jeans Vintage - Detalles</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Material:</strong> 100% Algodón de alto gramaje (320 gsm).</p>
-                    <p><strong>Tallas disponibles:</strong> S, M, L, XL (Corte holgado / Oversized).</p>
-                    <p class="mb-0"><strong>Envíos:</strong> Entregas personales y envíos nacionales disponibles.</p>
+                    <div class="row align-items-center">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <!-- AQUÍ PUEDES PONER TU FOTO REAL: src="img/baggy.jpg" -->
+                            <img src="https://placehold.co/400x350/212529/FFF?text=Foto+Real+Baggy" class="img-fluid rounded shadow-sm" alt="Baggy Jeans">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="fw-bold">Baggy Jeans Vintage</h4>
+                            <p class="text-muted">Mezclilla pesada de excelente calidad con diseño holgado ideal para un look urbano auténtico.</p>
+                            <p><strong>Material:</strong> 100% Algodón rígido.</p>
+                            <p class="mb-0 text-success fw-semibold">Disponibles en tallas S, M, L y XL.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -143,12 +152,99 @@
         </div>
     </div>
 
-    <!-- Modal 2: Modal de Acción / Formulario (Activado desde el Navbar) -->
-    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="tituloModalRegistro" aria-hidden="true">
+    <!-- Modal 2: Hoodie Boxy -->
+    <div class="modal fade" id="modalHoodie" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hoodie Boxy Fit - Detalles</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <img src="https://placehold.co/400x350/212529/FFF?text=Foto+Real+Hoodie" class="img-fluid rounded shadow-sm" alt="Hoodie Boxy">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="fw-bold">Hoodie Boxy Fit</h4>
+                            <p class="text-muted">Sudadera con capucha de alto gramaje, diseñada para mantener la forma y dar un calce perfecto en los hombros.</p>
+                            <p><strong>Material:</strong> Felpa burda perchada.</p>
+                            <p class="mb-0 text-success fw-semibold">Disponibles en Negro, Gris y Azul Oscuro.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Añadir al Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Camiseta Oversized -->
+    <div class="modal fade" id="modalTee" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Camiseta Gráfica Y2K - Detalles</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <img src="https://placehold.co/400x350/212529/FFF?text=Foto+Real+Tee" class="img-fluid rounded shadow-sm" alt="Camiseta Y2K">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="fw-bold">Camiseta Gráfica Y2K</h4>
+                            <p class="text-muted">Estampado en serigrafía de alta durabilidad con tela suave al tacto y corte oversized.</p>
+                            <p><strong>Material:</strong> Algodón peinado 24/1.</p>
+                            <p class="mb-0 text-success fw-semibold">Edición limitada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Añadir al Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Cargo Pants -->
+    <div class="modal fade" id="modalCargo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pantalón Cargo Parachute - Detalles</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <img src="https://placehold.co/400x350/212529/FFF?text=Foto+Real+Cargo" class="img-fluid rounded shadow-sm" alt="Cargo Pants">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="fw-bold">Pantalón Cargo Parachute</h4>
+                            <p class="text-muted">Estilo paracaídas con múltiples bolsillos utilitarios y cordones ajustables en la botamanga.</p>
+                            <p><strong>Material:</strong> Nylon técnico impermeable.</p>
+                            <p class="mb-0 text-success fw-semibold">Ideal para exteriores y estilo urbano.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Añadir al Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Inicio de Sesión (Navbar) -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="tituloModalRegistro">Acceso de Clientes</h5>
+                    <h5 class="modal-title">Acceso de Clientes</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
@@ -171,7 +267,7 @@
         </div>
     </div>
 
-    <!-- JS Bundle de Bootstrap 5 vía CDN (Obligatorio para Navbar y Modales) -->
+    <!-- JS Bundle de Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
